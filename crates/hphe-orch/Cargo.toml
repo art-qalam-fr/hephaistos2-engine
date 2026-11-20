@@ -1,0 +1,13 @@
+[package]
+name = "hphe-orch"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "CLI de pilotage de l'orchestrateur Hephaistos (FR-12) : list/dispatch/kill/verify/status/discipline — acces direct hphe-kit, zero spawn stdio"
+
+[dependencies]
+hphe-kit = { path = "../hphe-kit" }
+serde_json = "1.0"
+clap = { version = "4", features = ["derive"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
